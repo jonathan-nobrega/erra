@@ -1,5 +1,7 @@
 {
   "name": "erra",
-  "integrations": {},
+  "integrations": {
+    "capacitor": {}
+  },
   "type": "angular"
 }
