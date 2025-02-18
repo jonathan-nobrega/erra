@@ -1,0 +1,5 @@
+- Create Git and deploy pipeline
+- Create nav with Lists, Chores and People icons
+- Create list of Lists cards
+- Clicking in List card bring List listing page with Chores filtered
+- 
