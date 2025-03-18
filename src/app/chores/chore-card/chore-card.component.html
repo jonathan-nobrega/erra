@@ -1,0 +1,17 @@
+<ion-card>
+  <ion-card-header>
+  </ion-card-header>
+  <ion-card-title>{{title}}</ion-card-title>
+
+  <ion-card-content style="width: 100%; ;margin-right: 20px ;display: flex; justify-content: space-between;">
+    <p>{{notes}}</p>
+    <ion-icon name="chevron-forward-outline"></ion-icon>
+    
+  </ion-card-content>
+  <ion-button fill="clear"
+    expand="block"
+    (click)="presentToast(title)">Check In</ion-button>
+  <ion-toast trigger="open-toast"
+    message="Checked in {{title}}"
+    duration="5000"></ion-toast>
+</ion-card>

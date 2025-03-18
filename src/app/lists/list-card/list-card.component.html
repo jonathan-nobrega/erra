@@ -1,0 +1,16 @@
+<ion-card
+  href="/tabs/lists/{{id}}"
+  (click)="handleClick()">
+  <ion-card-header>
+    <ion-card-title>{{title}}</ion-card-title>
+    <ion-card-subtitle>{{subtitle}}</ion-card-subtitle>
+  </ion-card-header>
+
+  <ion-card-content style="margin-right: 20px ;display: flex; justify-content: space-between;">
+    <p>{{description}}</p>
+    <ion-icon name="chevron-forward-outline"></ion-icon>
+  </ion-card-content>
+
+  <ion-button fill="clear">Action 1</ion-button>
+  <ion-button fill="clear">Action 2</ion-button>
+</ion-card>

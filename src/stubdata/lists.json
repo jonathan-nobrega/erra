@@ -1,0 +1,115 @@
+[
+    {
+        "id": 1001,
+        "title": "Home organization",
+        "subtitle": "let's keep the house clean",
+        "description": "Usually things we need to do on regular basis",
+        "category": "recurring",
+        "chores": [
+            {
+                "id": 2001,
+                "title": "Vacum",
+                "notes": "second floor only",
+                "frequency": "every-week",
+                "startDate": "2025-02-10",
+                "assignee": {
+                    "id": 3001,
+                    "name": "Jon"
+                }
+            },
+            {
+                "id": 2002,
+                "title": "Clean garage",
+                "notes": "preassure washer",
+                "frequency": "every-other-week",
+                "startDate": "2025-02-10",
+                "assignee": {
+                    "id": 3001,
+                    "name": "Jon"
+                }
+            },
+            {
+                "id": 2003,
+                "title": "Wash clothes",
+                "notes": "wash, dry and fold",
+                "frequency": "once-week",
+                "startDate": "2025-02-10",
+                "assignee": {
+                    "id": 3001,
+                    "name": "Jon"
+                }
+            },
+            {
+                "id": 2004,
+                "title": "Check vacum robot",
+                "notes": "check water level and dispose dirt",
+                "frequency": "once-day",
+                "startDate": "2025-02-10",
+                "assignee": {
+                    "id": 3001,
+                    "name": "Helo"
+                }
+            },
+            {
+                "id": 2005,
+                "title": "Vacum",
+                "notes": "second floor only",
+                "frequency": "once-week",
+                "startDate": "2025-02-10",
+                "assignee": {
+                    "id": 3001,
+                    "name": "Jon"
+                }
+            }
+        ]
+    },
+    {
+        "id": 1002,
+        "title": "Groceries",
+        "subtitle": "me need to eat",
+        "description": "need to fix fridge. It's always empty",
+        "category": "one-time",
+        "chores": [
+            {
+                "id": 2005,
+                "title": "Tomato sauce",
+                "notes": "",
+                "frequency": "",
+                "startDate": "",
+                "assignee": null
+            },
+            {
+                "id": 2006,
+                "title": "Ground beef",
+                "notes": "",
+                "frequency": "",
+                "startDate": "",
+                "assignee": null
+            },
+            {
+                "id": 2007,
+                "title": "Chicken",
+                "notes": "",
+                "frequency": "",
+                "startDate": "",
+                "assignee": null
+            },
+            {
+                "id": 2008,
+                "title": "Rice",
+                "notes": "",
+                "frequency": "",
+                "startDate": "",
+                "assignee": null
+            },
+            {
+                "id": 2009,
+                "title": "Garlic",
+                "notes": "",
+                "frequency": "",
+                "startDate": "",
+                "assignee": null
+            }
+        ]
+    }
+]

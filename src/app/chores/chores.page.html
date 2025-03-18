@@ -1,0 +1,20 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Chores
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-list >
+    <ion-item *ngFor="let item of allChores" >
+      <app-chore-card style="width: 100%;"
+      title={{item.title}}
+        notes={{item.notes}}
+        frequency={{item.frequency}}
+        startDate={{item.startDate}}
+        assignee={{item.assignee}} />
+    </ion-item>
+  </ion-list>
+</ion-content>

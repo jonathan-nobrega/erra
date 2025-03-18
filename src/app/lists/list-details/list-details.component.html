@@ -1,0 +1,45 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button text="Back"
+        icon="chevron-back-outline" />
+    </ion-buttons>
+    <ion-title>List {{listId}}</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content fullscreen="true"
+  class="">
+  <div class="ion-padding">
+    <h1 style="font-weight: bold;">{{listDetails?.title}}</h1>
+
+    <div style="display: flex;">
+      <div style="flex: 1; align-items: center; width: 100%;">
+        <p style="flex: 2">{{listDetails?.subtitle}}</p>
+        <div style="display: flex; flex: 1; gap: 8px; align-items: center"
+          [ngSwitch]="listDetails?.category">
+          <ion-icon *ngSwitchCase="'recurring'"
+            name="repeat-outline"></ion-icon>
+          <ion-icon *ngSwitchCase="'one-time'"
+            name="flag-outline"></ion-icon>
+          <ion-note>{{listDetails?.category}}</ion-note>
+        </div>
+      </div>
+
+      <app-doughnut style="flex: 1;"></app-doughnut>
+      
+    </div>
+    <h4 style="font-weight: bold;">Description</h4>
+    <p>{{listDetails?.description}}</p>
+  </div>
+
+  <ion-list lines="none">
+    <app-chore-card *ngFor="let item of choresList"
+      title={{item.title}}
+      notes={{item.notes}}
+      frequency={{item.frequency}}
+      startDate={{item.startDate}}
+      assignee={{item.assignee?.name}}></app-chore-card>
+  </ion-list>
+
+</ion-content>

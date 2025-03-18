@@ -1,0 +1,18 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Lists
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content fullscreen="true">
+  <ion-list lines="none">
+    <app-list-card *ngFor="let item of lists"
+      [routerLink]="[item.id]"
+      style="display: block; width: 100%;"
+      title={{item.title}}
+      subtitle={{item.subtitle}}
+      description={{item.description}}></app-list-card>
+  </ion-list>
+</ion-content>

@@ -1,5 +1,18 @@
-- Create Git and deploy pipeline
-- Create nav with Lists, Chores and People icons
-- Create list of Lists cards
-- Clicking in List card bring List listing page with Chores filtered
-- 
+Topics to cover
+
+- Inputs and Outputs
+- Getters and Setters
+- OnPush change detection
+- Routing
+- MVP pattern (containers and presenters)
+- Forms and validation
+- NgRx
+    - effects
+    - reducers
+    - actions
+    - selectors
+    - facades
+
+
+Backlog
+
