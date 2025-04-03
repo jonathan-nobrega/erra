@@ -5,6 +5,7 @@ export interface Chore {
     frequency: string
     startDate: string
     assignee: Assignee | null
+    lastCheckIn?: string | null
     listName?: string
 }
 

@@ -11,11 +11,12 @@
                 "title": "Vacum",
                 "notes": "second floor only",
                 "frequency": "every-week",
-                "startDate": "2025-02-10",
+                "startDate": "2025-02-10T00:00:00",
                 "assignee": {
                     "id": 3001,
                     "name": "Jon"
-                }
+                },
+                "lastCheckIn": "2025-02-10T12:34:56"
             },
             {
                 "id": 2002,
@@ -26,7 +27,8 @@
                 "assignee": {
                     "id": 3001,
                     "name": "Jon"
-                }
+                },
+                "lastCheckIn": null
             },
             {
                 "id": 2003,
@@ -37,7 +39,8 @@
                 "assignee": {
                     "id": 3001,
                     "name": "Jon"
-                }
+                },
+                "lastCheckIn": "2025-02-10T12:34:56"
             },
             {
                 "id": 2004,
@@ -48,7 +51,8 @@
                 "assignee": {
                     "id": 3001,
                     "name": "Helo"
-                }
+                },
+                "lastCheckIn": null
             },
             {
                 "id": 2005,
@@ -59,7 +63,8 @@
                 "assignee": {
                     "id": 3001,
                     "name": "Jon"
-                }
+                },
+                "lastCheckIn": "2025-02-10T12:34:56"
             }
         ]
     },
@@ -76,7 +81,8 @@
                 "notes": "",
                 "frequency": "",
                 "startDate": "",
-                "assignee": null
+                "assignee": null,
+                "lastCheckIn": null
             },
             {
                 "id": 2006,
@@ -84,7 +90,8 @@
                 "notes": "",
                 "frequency": "",
                 "startDate": "",
-                "assignee": null
+                "assignee": null,
+                "lastCheckIn": null
             },
             {
                 "id": 2007,
@@ -92,7 +99,8 @@
                 "notes": "",
                 "frequency": "",
                 "startDate": "",
-                "assignee": null
+                "assignee": null,
+                "lastCheckIn": null
             },
             {
                 "id": 2008,
@@ -100,7 +108,8 @@
                 "notes": "",
                 "frequency": "",
                 "startDate": "",
-                "assignee": null
+                "assignee": null,
+                "lastCheckIn": null
             },
             {
                 "id": 2009,
@@ -108,7 +117,8 @@
                 "notes": "",
                 "frequency": "",
                 "startDate": "",
-                "assignee": null
+                "assignee": null,
+                "lastCheckIn": null
             }
         ]
     }

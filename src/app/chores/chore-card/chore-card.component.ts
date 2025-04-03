@@ -15,6 +15,7 @@ export class ChoreCardComponent implements OnInit {
   @Input() frequency: string
   @Input() startDate: string
   @Input() assignee: string
+  @Input() lastCheckIn: string
 
   @Output() actionSheetEvent = new EventEmitter<string>()
   @Output() toastEvent = new EventEmitter<string>()

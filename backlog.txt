@@ -1,6 +1,9 @@
 Backlog
 
 [ ] improve chores card
+    i want to know when was last time that happened
+        for that i need to add to last assignee string with latest check in date
+    i want  to know if I'm late on the task
 [ ] make people card
 [ ] clicking chores card leads to Chore details
 [ ] ADD icon on right corner of all screens

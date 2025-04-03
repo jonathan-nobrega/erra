@@ -6,23 +6,17 @@
         <ion-note>{{frequency}}</ion-note>
       </div>
       <ion-button fill="clear"
-        (click)="openActionSheet()"
-        id="open-action-sheet"></ion-button>
+        (click)="openActionSheet()"></ion-button>
 
-      <ion-icon name="ellipsis-horizontal-outline"></ion-icon>
+      <ion-button fill="clear"
+        (click)="openActionSheet()">
+        <ion-icon name="ellipsis-horizontal"></ion-icon>
+      </ion-button>
     </div>
   </ion-card-header>
 
   <ion-card-content>
-    <ion-card-subtitle>Last assignee</ion-card-subtitle>
-    <p>{{assignee}}</p>
-
-    <!-- <ion-button fill="clear"
-    expand="block"
-    (click)="presentToast(title)">Check In</ion-button>
-    <ion-toast trigger="open-toast"
-    message="Checked in {{title}}"
-    duration="5000"></ion-toast> -->
-
+    <ion-card-subtitle>Last check in</ion-card-subtitle>
+    <p>{{ lastCheckIn ? (assignee + ' on ' + (lastCheckIn | date:'MMM d, y h:mm a')) : '--' }}</p>
   </ion-card-content>
 </ion-card>
