@@ -13,6 +13,3 @@ Topics to cover
     - selectors
     - facades
 
-
-Backlog
-

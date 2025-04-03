@@ -27,7 +27,7 @@
       </div>
 
       <app-doughnut style="flex: 1;"></app-doughnut>
-      
+
     </div>
     <h4 style="font-weight: bold;">Description</h4>
     <p>{{listDetails?.description}}</p>
@@ -39,7 +39,16 @@
       notes={{item.notes}}
       frequency={{item.frequency}}
       startDate={{item.startDate}}
-      assignee={{item.assignee?.name}}></app-chore-card>
+      assignee={{item.assignee?.name}}
+      (actionSheetEvent)="handleActionSheet($event)"></app-chore-card>
   </ion-list>
+
+  <!-- <ion-toast trigger="checkin"
+    message="Checked in {{title}}"
+    duration="5000"></ion-toast> -->
+<!-- 
+  <ion-action-sheet trigger="open-action-sheet"
+    header="Actions"
+    [buttons]="actionSheetButtons"></ion-action-sheet> -->
 
 </ion-content>

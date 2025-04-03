@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { ToastController } from '@ionic/angular/standalone';
 
 
@@ -8,7 +8,7 @@ import { ToastController } from '@ionic/angular/standalone';
   styleUrls: ['./chore-card.component.scss'],
   standalone: false
 })
-export class ChoreCardComponent  implements OnInit {
+export class ChoreCardComponent implements OnInit {
 
   @Input() title: string
   @Input() notes: string
@@ -16,18 +16,15 @@ export class ChoreCardComponent  implements OnInit {
   @Input() startDate: string
   @Input() assignee: string
 
+  @Output() actionSheetEvent = new EventEmitter<string>()
+  @Output() toastEvent = new EventEmitter<string>()
+
   constructor(private toastController: ToastController) { }
 
-  ngOnInit() {}
+  ngOnInit() { }
 
-  async presentToast(text: string) {
-    const toast = await this.toastController.create({
-      message: `Check in for ${text}`,
-      duration: 1500,
-      position: 'top'
-    })
-
-    await toast.present()
+  openActionSheet() {
+    this.actionSheetEvent.emit(this.title)
   }
 
 }

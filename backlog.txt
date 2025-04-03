@@ -1,0 +1,9 @@
+Backlog
+
+[ ] improve chores card
+[ ] make people card
+[ ] clicking chores card leads to Chore details
+[ ] ADD icon on right corner of all screens
+[ ] add list Form
+[ ] add chore Form
+[ ] add person Form 
