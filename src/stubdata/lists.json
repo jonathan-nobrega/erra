@@ -10,7 +10,7 @@
                 "id": 2001,
                 "title": "Vacum",
                 "notes": "second floor only",
-                "frequency": "every-week",
+                "frequency": "once-week",
                 "startDate": "2025-02-10T00:00:00",
                 "assignee": {
                     "id": 3001,
