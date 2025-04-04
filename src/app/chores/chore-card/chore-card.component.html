@@ -1,22 +1,27 @@
 <ion-card>
   <ion-card-header>
-    <div style="display: flex; text-align: center; justify-content: space-between;">
-      <div>
+    <div style="display: flex; justify-content: space-between;">
+      <div style="text-align: left; width: 90%;">
         <ion-card-title>{{title}}</ion-card-title>
         <ion-note>{{frequency}}</ion-note>
       </div>
       <ion-button fill="clear"
-        (click)="openActionSheet()"></ion-button>
-
-      <ion-button fill="clear"
         (click)="openActionSheet()">
-        <ion-icon name="ellipsis-horizontal"></ion-icon>
+        <ion-icon name="ellipsis-vertical"></ion-icon>
       </ion-button>
     </div>
   </ion-card-header>
 
   <ion-card-content>
-    <ion-card-subtitle>Last check in</ion-card-subtitle>
-    <p>{{ lastCheckIn ? (assignee + ' on ' + (lastCheckIn | date:'MMM d, y h:mm a')) : '--' }}</p>
+    <div style="display: flex; justify-content: space-between;">
+      <div style="text-align: left; ">
+        <ion-card-subtitle>Last check in</ion-card-subtitle>
+        <p>{{ lastCheckIn ? (assignee + ' on ' + (lastCheckIn | date:'MMM d, y h:mm a')) : '--' }}</p>
+      </div>
+      <ion-chip>
+        <ion-icon name="checkmark-circle"></ion-icon>
+        <ion-note>on track</ion-note>
+      </ion-chip>
+    </div>
   </ion-card-content>
 </ion-card>

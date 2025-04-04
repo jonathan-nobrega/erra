@@ -46,7 +46,13 @@ export class ListDetailsComponent implements OnInit {
         {
           text: `Check in ${event}`,
           handler: () => {
-            this.presentToast(event)
+            this.presentToast(`🎉 Check in for '${event}'`)
+          }
+        },
+        {
+          text: 'Undo last check in',
+          handler: () => {
+            this.presentToast(`↩️ Erased last check in for '${event}'`)
           }
         },
         {
@@ -63,7 +69,7 @@ export class ListDetailsComponent implements OnInit {
 
   async presentToast(text: string) {
     const toast = await this.toastController.create({
-      message: `Check in for ${text}`,
+      message: text,
       duration: 1500,
       position: 'top'
     })
