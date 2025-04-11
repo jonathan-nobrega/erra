@@ -9,7 +9,6 @@ import { ToastController } from '@ionic/angular/standalone';
   standalone: false
 })
 export class ChoreCardComponent implements OnInit {
-
   @Input() title: string
   @Input() notes: string
   @Input() frequency: string
@@ -20,9 +19,15 @@ export class ChoreCardComponent implements OnInit {
   @Output() actionSheetEvent = new EventEmitter<string>()
   @Output() toastEvent = new EventEmitter<string>()
 
+  frequencyStatus: 'empty' | 'on-track' | 'late'
+
   constructor(private toastController: ToastController) { }
 
-  ngOnInit() { }
+  ngOnInit() {
+    this.lastCheckIn = this.lastCheckIn ?? this.startDate
+    console.log(this.lastCheckIn)
+    this.frequencyStatus = this.checkFrequencyStatus(this.frequency, this.lastCheckIn)
+  }
 
   openActionSheet() {
     this.actionSheetEvent.emit(this.title)
@@ -30,22 +35,24 @@ export class ChoreCardComponent implements OnInit {
 
   // I still need to implement different ion-chip states for 'on-track', 'late', and 'empty'
 
-  checkFrequencyStatus() {
-    switch (this.frequency) {
-      case 'once-day': return this.calculateFrequencyStatus(1)
-      case 'once-week': return this.calculateFrequencyStatus(7)
-      case 'every-other-week': return this.calculateFrequencyStatus(14)
-      case 'once-month': return this. calculateFrequencyStatus(30)
-      default: return 'empty'
-    }
+  checkFrequencyStatus(frequency: string, lastCheckIn: string) {
+    let frequeyncyIntervalDays;
+
+    if (frequency == 'once-day') frequeyncyIntervalDays = 1;
+    else if (frequency == 'once-week') frequeyncyIntervalDays = 7;
+    else if (frequency == 'every-other-week') frequeyncyIntervalDays = 14;
+    else if (frequency == 'once-month') frequeyncyIntervalDays = 30;
+    else return 'empty';
+
+    return this.calculateFrequencyStatus(frequeyncyIntervalDays, lastCheckIn)
   }
-  
-  calculateFrequencyStatus(interval: number) {
+
+  calculateFrequencyStatus(interval: number, lastCheckIn: string) {
     if (!this.lastCheckIn) return 'empty'
 
-    const maxInterval = Date.now() - (interval * 24 * 60 * 60 * 1000)
+    const expectedCheckIn = new Date(Date.parse(lastCheckIn) + (interval * 24 * 60 * 60 * 1000)).toISOString();
 
-    if (maxInterval > Date.parse(this.lastCheckIn)) return 'late'
+    if (Date.now() > Date.parse(expectedCheckIn)) return 'late'
     else return 'on-track'
   }
 

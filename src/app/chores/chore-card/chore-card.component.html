@@ -13,15 +13,27 @@
   </ion-card-header>
 
   <ion-card-content>
+    <ion-card-subtitle>Last check in</ion-card-subtitle>
     <div style="display: flex; justify-content: space-between;">
-      <div style="text-align: left; ">
-        <ion-card-subtitle>Last check in</ion-card-subtitle>
+      <div style="text-align: left; width: 50%;">
         <p>{{ lastCheckIn ? (assignee + ' on ' + (lastCheckIn | date:'MMM d, y h:mm a')) : '--' }}</p>
       </div>
-      <ion-chip>
-        <ion-icon name="checkmark-circle"></ion-icon>
-        <ion-note>on track</ion-note>
-      </ion-chip>
+
+      <ng-container [ngSwitch]="frequencyStatus" style="min-width: 96px;">
+        <ng-container *ngSwitchCase="'on-track'">
+          <ion-chip>
+            <ion-icon name="checkmark-circle"></ion-icon>
+            <ion-note>{{frequencyStatus}}</ion-note>
+          </ion-chip>
+        </ng-container>
+        <ng-container *ngSwitchCase="'late'">
+          <ion-chip>
+            <ion-icon name="warning"></ion-icon>
+            <ion-note>{{frequencyStatus}}</ion-note>
+          </ion-chip>
+        </ng-container>
+      </ng-container>
+
     </div>
   </ion-card-content>
 </ion-card>
