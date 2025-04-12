@@ -20,6 +20,7 @@ export class ChoreCardComponent implements OnInit {
   @Output() toastEvent = new EventEmitter<string>()
 
   frequencyStatus: 'empty' | 'on-track' | 'late'
+  lastCheckInSimplified: string
 
   constructor(private toastController: ToastController) { }
 
@@ -27,6 +28,8 @@ export class ChoreCardComponent implements OnInit {
     this.lastCheckIn = this.lastCheckIn ?? this.startDate
     console.log(this.lastCheckIn)
     this.frequencyStatus = this.checkFrequencyStatus(this.frequency, this.lastCheckIn)
+    this.lastCheckInSimplified = this.formatTimeAgo(Date.parse(this.lastCheckIn))
+    console.log(this.lastCheckInSimplified)
   }
 
   openActionSheet() {
@@ -55,5 +58,25 @@ export class ChoreCardComponent implements OnInit {
     if (Date.now() > Date.parse(expectedCheckIn)) return 'late'
     else return 'on-track'
   }
+
+  formatTimeAgo(timestamp: number): string {
+    const now = new Date().getTime();
+    const diff = now - timestamp; // difference in milliseconds
+
+    const seconds = Math.floor(diff / 1000);
+    const minutes = Math.floor(seconds / 60);
+    const hours = Math.floor(minutes / 60);
+    const days = Math.floor(hours / 24);
+    const months = Math.floor(days / 30);
+    const years = Math.floor(days / 365);
+
+    if (years > 0) return `${years}y ago`;
+    if (months > 0) return `${months}mo ago`;
+    if (days > 0) return `${days}d ago`;
+    if (hours > 0) return `${hours}h ago`;
+    if (minutes > 0) return `${minutes}m ago`;
+    return `${seconds}s ago`;
+  }
+
 
 }

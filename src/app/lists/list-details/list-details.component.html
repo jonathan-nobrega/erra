@@ -1,36 +1,33 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-buttons slot="start">
-      <ion-back-button text="Back"
-        icon="chevron-back-outline" />
+      <ion-back-button text=""
+        icon="arrow-back-outline" />
     </ion-buttons>
-    <ion-title>List {{listId}}</ion-title>
+    <ion-title>{{listDetails?.title}}</ion-title>
+    <ion-buttons slot="end">
+      <ion-button fill="clear">
+        <ion-icon name="ellipsis-vertical"></ion-icon>
+      </ion-button>
+    </ion-buttons>
   </ion-toolbar>
 </ion-header>
 
 <ion-content fullscreen="true"
   class="">
-  <div class="ion-padding">
-    <h1 style="font-weight: bold;">{{listDetails?.title}}</h1>
-
-    <div style="display: flex;">
-      <div style="flex: 1; align-items: center; width: 100%;">
-        <p style="flex: 2">{{listDetails?.subtitle}}</p>
-        <div style="display: flex; flex: 1; gap: 8px; align-items: center"
-          [ngSwitch]="listDetails?.category">
-          <ion-icon *ngSwitchCase="'recurring'"
-            name="repeat-outline"></ion-icon>
-          <ion-icon *ngSwitchCase="'one-time'"
-            name="flag-outline"></ion-icon>
-          <ion-note>{{listDetails?.category}}</ion-note>
-        </div>
+  <div class="ion-padding" style="margin-top: 16px;">
+    <div style="display: flex; justify-content: space-between;">
+      <div>
+        <ion-card-subtitle>Next due</ion-card-subtitle>
+        <h2 style="margin-bottom: 0; margin-top: 0;">Monday, Feb 12</h2>
       </div>
-
-      <app-doughnut style="flex: 1;"></app-doughnut>
-
+      <div style="text-align: right;">
+        <ion-card-subtitle>Completion</ion-card-subtitle>
+        <h2 style="margin-bottom: 0; margin-top: 0;">3/5 items</h2>
+      </div>
     </div>
-    <h4 style="font-weight: bold;">Description</h4>
-    <p>{{listDetails?.description}}</p>
+    <ion-progress-bar value="0.6"
+      style="margin-top: 16px; height: 8px;"></ion-progress-bar>
   </div>
 
   <ion-list lines="none">
@@ -43,13 +40,4 @@
       lastCheckIn={{item.lastCheckIn}}
       (actionSheetEvent)="handleActionSheet($event)"></app-chore-card>
   </ion-list>
-
-  <!-- <ion-toast trigger="checkin"
-    message="Checked in {{title}}"
-    duration="5000"></ion-toast> -->
-<!-- 
-  <ion-action-sheet trigger="open-action-sheet"
-    header="Actions"
-    [buttons]="actionSheetButtons"></ion-action-sheet> -->
-
 </ion-content>

@@ -1,27 +1,12 @@
 <ion-card>
   <ion-card-header>
-    <div style="display: flex; justify-content: space-between;">
-      <div style="text-align: left; width: 90%;">
-        <ion-card-title>{{title}}</ion-card-title>
-        <ion-note>{{frequency}}</ion-note>
-      </div>
-      <ion-button fill="clear"
-        (click)="openActionSheet()">
-        <ion-icon name="ellipsis-vertical"></ion-icon>
-      </ion-button>
-    </div>
-  </ion-card-header>
-
-  <ion-card-content>
-    <ion-card-subtitle>Last check in</ion-card-subtitle>
-    <div style="display: flex; justify-content: space-between;">
-      <div style="text-align: left; width: 50%;">
-        <p>{{ lastCheckIn ? (assignee + ' on ' + (lastCheckIn | date:'MMM d, y h:mm a')) : '--' }}</p>
-      </div>
-
-      <ng-container [ngSwitch]="frequencyStatus" style="min-width: 96px;">
-        <ng-container *ngSwitchCase="'on-track'">
-          <ion-chip>
+    <div style="display: flex; align-items: center; justify-content: space-between;">
+      <h3 style="margin: 0;">{{title}}</h3>
+      <div style="display: flex; align-items: center;">
+        <ng-container [ngSwitch]="frequencyStatus"
+        style="min-width: 96px;">
+        <ng-container *ngSwitchCase="'on-track'" fill="clear">
+          <ion-chip fill="clear">
             <ion-icon name="checkmark-circle"></ion-icon>
             <ion-note>{{frequencyStatus}}</ion-note>
           </ion-chip>
@@ -33,7 +18,22 @@
           </ion-chip>
         </ng-container>
       </ng-container>
+      <ion-button fill="clear"
+        (click)="openActionSheet()">
+        <ion-icon name="ellipsis-vertical"></ion-icon>
+      </ion-button>
+      </div>
+    </div>
+  </ion-card-header>
 
+  <ion-card-content>
+    <div style="display: flex; alig;align-items: center; justify-content: space-between;">
+      <ion-note>{{frequency}}</ion-note>
+      <div style="display: flex; justify-content: space-between;">
+        <div style="text-align: left; width:100%;">
+          <p>{{ lastCheckIn ? ('Last check-in: ' + assignee + ' • ' + lastCheckInSimplified) : '' }}</p>
+        </div>
+      </div>
     </div>
   </ion-card-content>
 </ion-card>

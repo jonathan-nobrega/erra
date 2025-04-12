@@ -19,29 +19,19 @@ export class DoughnutComponent implements OnInit {
     this.doughnutChart = new Chart('doughnutCanvas', {
       type: 'doughnut',
       data: {
-        // labels: [
-        //   'Red',
-        //   'Blue',
-        //   'Yellow'
-        // ],
         datasets: [{
-          label: 'My First Dataset',
           data: [this.totalCount, this.completedCount],
           backgroundColor: [
-            'rgb(255, 99, 132)',
             'rgb(54, 162, 235)',
             'rgb(255, 205, 86)'
           ],
-          hoverOffset: 4
+          hoverOffset: 8
         }]
       },
       options: {
-        cutout: "80%",
-        maintainAspectRatio: false,
+        cutout: "70%",
+        maintainAspectRatio: true,
         responsive: true,
-        layout: {
-          padding: 10
-        }
       },
       plugins: [{
         id: "centerText",
@@ -51,7 +41,7 @@ export class DoughnutComponent implements OnInit {
             ctx = chart.ctx;
 
           ctx.restore();
-          const fontSize = (height / 114).toFixed(2);
+          const fontSize = 1.2
           ctx.font = fontSize + "em sans-serif";
           ctx.textBaseline = "middle";
 
