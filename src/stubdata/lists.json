@@ -5,6 +5,10 @@
         "subtitle": "let's keep the house clean",
         "description": "Usually things we need to do on regular basis",
         "category": "recurring",
+        "createdBy": {
+            "id": 3001,
+            "name": "Jon"
+        },
         "chores": [
             {
                 "id": 2001,
@@ -37,8 +41,8 @@
                 "frequency": "once-week",
                 "startDate": "2025-02-10",
                 "assignee": {
-                    "id": 3001,
-                    "name": "Jon"
+                    "id": 3002,
+                    "name": "Helo"
                 },
                 "lastCheckIn": "2025-02-10T12:34:56"
             },
@@ -49,7 +53,7 @@
                 "frequency": "once-day",
                 "startDate": "2025-02-10",
                 "assignee": {
-                    "id": 3001,
+                    "id": 3002,
                     "name": "Helo"
                 },
                 "lastCheckIn": null
@@ -74,6 +78,10 @@
         "subtitle": "me need to eat",
         "description": "need to fix fridge. It's always empty",
         "category": "one-time",
+        "createdBy": {
+            "id": 3001,
+            "name": "Helo"
+        },
         "chores": [
             {
                 "id": 2005,

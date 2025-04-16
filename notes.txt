@@ -13,3 +13,5 @@ Topics to cover
     - selectors
     - facades
 
+
+I worked in construction before becoming a software engineer. Sounds like a good match

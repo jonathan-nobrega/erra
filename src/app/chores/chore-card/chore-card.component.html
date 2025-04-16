@@ -2,7 +2,7 @@
   <ion-card-header>
     <div style="display: flex; align-items: center; justify-content: space-between;">
       <div>
-        <ion-card-title>{{title}}</ion-card-title>
+        <h3 style="margin-top: 0;">{{title}}</h3>
         <ion-card-subtitle>{{frequency}}</ion-card-subtitle>
       </div>
       <ion-button fill="clear"
@@ -11,41 +11,40 @@
       </ion-button>
     </div>
   </ion-card-header>
-
   <ion-card-content>
     <div style="display: flex; align-items: center; justify-content: space-between;">
-      <ion-note color="dark">{{ lastCheckIn ? ('Last check-in: ' + assignee + ' • ' + lastCheckInSimplified) : '--'
-        }}</ion-note>
       <div style="display: flex; align-items: center;">
-        <ng-container [ngSwitch]="frequencyStatus"
-          style="min-width: 96px;">
-          <ng-container *ngSwitchCase="'on-track'"
-            fill="clear">
-            <ion-chip color="success"
-              [outline]="true"
-              fill="clear">
-              <ion-icon name="checkmark-circle"></ion-icon>
-              <ion-note>{{frequencyStatus}}</ion-note>
-            </ion-chip>
-          </ng-container>
-          <ng-container *ngSwitchCase="'late'">
-            <ion-chip color="warning"
-              [outline]="true"
-              fill="clear">
-              <ion-icon name="warning"></ion-icon>
-              <ion-note>{{frequencyStatus}}</ion-note>
-            </ion-chip>
-          </ng-container>
-          <ng-container *ngSwitchDefault>
-            <ion-chip color="medium"
-              [outline]="true"
-              fill="clear">
-              <ion-icon name="time-outline"></ion-icon>
-              <ion-note>pending</ion-note>
-            </ion-chip>
-          </ng-container>
-        </ng-container>
+        <ion-note>{{ lastCheckIn ? ('Last check-in: ' + assignee + ' • ' + lastCheckInSimplified) : '--'
+          }}</ion-note>
       </div>
+      <ng-container [ngSwitch]="frequencyStatus"
+        style="min-width: 96px;">
+        <ng-container *ngSwitchCase="'on-track'"
+          fill="clear">
+          <ion-chip color="success"
+            [outline]="true"
+            fill="clear">
+            <ion-icon name="checkmark-circle"></ion-icon>
+            <ion-note>{{frequencyStatus}}</ion-note>
+          </ion-chip>
+        </ng-container>
+        <ng-container *ngSwitchCase="'late'">
+          <ion-chip color="warning"
+            [outline]="true"
+            fill="clear">
+            <ion-icon name="warning"></ion-icon>
+            <ion-note>{{frequencyStatus}}</ion-note>
+          </ion-chip>
+        </ng-container>
+        <ng-container *ngSwitchDefault>
+          <ion-chip color="medium"
+            [outline]="true"
+            fill="clear">
+            <ion-icon name="time-outline"></ion-icon>
+            <ion-note>pending</ion-note>
+          </ion-chip>
+        </ng-container>
+      </ng-container>
     </div>
   </ion-card-content>
 </ion-card>

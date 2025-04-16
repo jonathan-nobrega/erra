@@ -20,6 +20,7 @@ export class ListDetailsComponent implements OnInit {
   choresCount: number = 0
   choresCompleted: number = 0
   isActionSheetOpen = false
+  isModalOpen = true
 
   constructor(
     private route: ActivatedRoute,
@@ -76,5 +77,12 @@ export class ListDetailsComponent implements OnInit {
 
     await toast.present()
   }
-  
+
+  openInformationModal() {
+    this.isModalOpen = true
+  }
+
+  closeInformationModal() {
+    this.isModalOpen = false
+  }
 }
