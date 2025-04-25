@@ -1,0 +1,19 @@
+.avatar-container {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 4px solid white;
+    background-color: var(--ion-color-secondary);
+}
+
+.name-description {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    width: 100%;
+    height: 100%;
+    margin: auto;
+    color: var(--ion-color-dark);
+    font-size: small;
+}

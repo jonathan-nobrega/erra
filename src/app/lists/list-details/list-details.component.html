@@ -55,42 +55,64 @@
             <ion-button (click)="isModalOpen = false"
               [strong]="true"
               fill="clear">
-              <ion-icon name="close-outline"></ion-icon>
+              <ion-icon name="close"></ion-icon>
             </ion-button>
           </ion-buttons>
         </ion-toolbar>
         <ion-content class="ion-padding">
-          <p>Description</p>
+          <ion-card-subtitle>Description</ion-card-subtitle>
           <p>{{listDetails?.description}}</p>
-          <p>Created by</p>
-          <p>{{listDetails?.createdBy?.name}}</p>
-          <p>Members</p>
-          <p>make cool stacking of photos of people who checked in</p>
-          <p>Statistics</p>
+          <ion-card-subtitle>Created by</ion-card-subtitle>
+          <div>
+            <div style="display: flex; align-items: center;">
+              <app-avatar name={{listDetails?.createdBy?.name}}></app-avatar>
+              <p style="margin-left: 8px;">{{listDetails?.createdBy?.name}}</p>
+            </div>
+          </div>
+          <ion-card-subtitle>Members</ion-card-subtitle>
+          <div class="avatars">
+            <app-avatar name="Foo" class="avatar"></app-avatar>
+            <app-avatar name="Bar" class="avatar"></app-avatar>
+            <app-avatar name="Zod" class="avatar"></app-avatar>
+            <app-avatar name="+2" [isAvatar]=false [isCustom]=true class="avatar"></app-avatar>
+          </div>
+          <ion-card-subtitle>Statitics</ion-card-subtitle>
+
           <ion-grid>
+
             <ion-row>
-              <ion-col>
+              <ion-col size="4">
                 <ion-card>
-                  <ion-card-header>
-                    <ion-card-title>Last check-in</ion-card-title>
-                  </ion-card-header>
                   <ion-card-content>
-                    <p>Last check-in</p>
-                    <p>Last check-in</p>
-                    <p>Last check-in</p>
+                    <p>Total items</p>
+                    <h1><strong>17</strong></h1>
                   </ion-card-content>
                 </ion-card>
               </ion-col>
-              <ion-col>1</ion-col>
-              <ion-col>1</ion-col>
+              <ion-col size="4">
+                <ion-card>
+                  <ion-card-content>
+                    <p>Completed</p>
+                    <h1><strong>17</strong></h1>
+                  </ion-card-content>
+                </ion-card>
+              </ion-col>
+              <ion-col size="4">
+                <ion-card>
+                  <ion-card-content>
+                    <p>Active</p>
+                    <h1><strong>17</strong></h1>
+                  </ion-card-content>
+                </ion-card>
+              </ion-col>
             </ion-row>
+
+
+
           </ion-grid>
+
         </ion-content>
       </div>
     </ng-template>
-
-    <ion-content>
-      hi
-    </ion-content>
   </ion-modal>
 </ion-content>

@@ -1,0 +1,14 @@
+<div class="avatar-container">
+  <ng-container *ngIf="isAvatar; else textTemplate">
+    <img [src]="'https://api.dicebear.com/9.x/adventurer/svg?seed=' + name"
+      alt="User Avatar" />
+  </ng-container>
+</div>
+
+<ng-template #textTemplate>
+  <p class="name-description">
+    <strong>
+      {{ isCustom ? name : name.charAt(0).toUpperCase() }}
+    </strong>
+  </p>
+</ng-template>
