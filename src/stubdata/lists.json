@@ -1,71 +1,71 @@
 [
     {
-        "id": 1001,
+        "id": "1001",
         "title": "Home organization",
         "subtitle": "let's keep the house clean",
         "description": "Usually things we need to do on regular basis",
         "category": "recurring",
         "createdBy": {
-            "id": 3001,
+            "id": "3001",
             "name": "Jon"
         },
         "chores": [
             {
-                "id": 2001,
+                "id": "2001",
                 "title": "Vacum",
                 "notes": "second floor only",
                 "frequency": "once-week",
                 "startDate": "2025-02-10T00:00:00",
                 "assignee": {
-                    "id": 3001,
+                    "id": "3001",
                     "name": "Jon"
                 },
                 "lastCheckIn": "2025-04-06T12:34:56"
             },
             {
-                "id": 2002,
+                "id": "2002",
                 "title": "Clean garage",
                 "notes": "preassure washer",
                 "frequency": "every-other-week",
                 "startDate": "2025-02-10",
                 "assignee": {
-                    "id": 3001,
+                    "id": "3001",
                     "name": "Jon"
                 },
                 "lastCheckIn": null
             },
             {
-                "id": 2003,
+                "id": "2003",
                 "title": "Wash clothes",
                 "notes": "wash, dry and fold",
                 "frequency": "once-week",
                 "startDate": "2025-02-10",
                 "assignee": {
-                    "id": 3002,
+                    "id": "3002",
                     "name": "Helo"
                 },
                 "lastCheckIn": "2025-02-10T12:34:56"
             },
             {
-                "id": 2004,
+                "id": "2004",
                 "title": "Check vacum robot",
                 "notes": "check water level and dispose dirt",
                 "frequency": "once-day",
                 "startDate": "2025-02-10",
                 "assignee": {
-                    "id": 3002,
+                    "id": "3002",
                     "name": "Helo"
                 },
                 "lastCheckIn": null
             },
             {
-                "id": 2005,
+                "id": "2005",
                 "title": "Vacum",
                 "notes": "second floor only",
                 "frequency": "once-week",
                 "startDate": "2025-02-10",
                 "assignee": {
-                    "id": 3001,
+                    "id": "3001",
                     "name": "Jon"
                 },
                 "lastCheckIn": "2025-02-10T12:34:56"
@@ -73,18 +73,18 @@
         ]
     },
     {
-        "id": 1002,
+        "id": "1002",
         "title": "Groceries",
         "subtitle": "me need to eat",
         "description": "need to fix fridge. It's always empty",
         "category": "one-time",
         "createdBy": {
-            "id": 3001,
+            "id": "3001",
             "name": "Helo"
         },
         "chores": [
             {
-                "id": 2005,
+                "id": "2005",
                 "title": "Tomato sauce",
                 "notes": "",
                 "frequency": "",
@@ -93,7 +93,7 @@
                 "lastCheckIn": null
             },
             {
-                "id": 2006,
+                "id": "2006",
                 "title": "Ground beef",
                 "notes": "",
                 "frequency": "",
@@ -102,7 +102,7 @@
                 "lastCheckIn": null
             },
             {
-                "id": 2007,
+                "id": "2007",
                 "title": "Chicken",
                 "notes": "",
                 "frequency": "",
@@ -111,7 +111,7 @@
                 "lastCheckIn": null
             },
             {
-                "id": 2008,
+                "id": "2008",
                 "title": "Rice",
                 "notes": "",
                 "frequency": "",
@@ -120,7 +120,7 @@
                 "lastCheckIn": null
             },
             {
-                "id": 2009,
+                "id": "2009",
                 "title": "Garlic",
                 "notes": "",
                 "frequency": "",

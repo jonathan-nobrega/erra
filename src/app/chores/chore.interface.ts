@@ -1,5 +1,5 @@
 export interface Chore {
-    id: number
+    id: string
     title: string
     notes: string
     frequency: string
@@ -10,6 +10,6 @@ export interface Chore {
 }
 
 interface Assignee {
-    id: number
+    id: string
     name: string
 }

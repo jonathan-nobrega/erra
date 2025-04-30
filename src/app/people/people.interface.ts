@@ -1,4 +1,4 @@
 export interface People {
-    id: number
+    id: string
     name: string
 }

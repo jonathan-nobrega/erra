@@ -1,6 +1,9 @@
-import { Component } from '@angular/core';
-import listsData from '../../stubdata/lists.json';
+import { Component, OnInit } from '@angular/core';
+import { Store } from '@ngrx/store';
+import { Observable } from 'rxjs';
 import { List } from './list.interface';
+import { ListsActions } from './state/lists.actions';
+import { selectAllLists } from './state/lists.selectors';
 
 @Component({
   selector: 'app-lists',
@@ -8,10 +11,17 @@ import { List } from './list.interface';
   styleUrls: ['lists.page.scss'],
   standalone: false,
 })
-export class ListsPage {
-  
-  lists: List[] = listsData  
+export class ListsPage implements OnInit {
 
-  constructor() {}
+  lists$: Observable<List[]> = this.store.select(selectAllLists);
 
+  constructor(private store: Store) { }
+
+  ngOnInit() {
+    this.store.dispatch(ListsActions.loadLists());
+  }
+
+  listClicked(listId: string) {
+    this.store.dispatch(ListsActions.selectList({ listId }));
+  }
 }
