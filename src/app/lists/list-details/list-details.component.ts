@@ -26,7 +26,7 @@ export class ListDetailsComponent implements OnInit {
   choresCount: number = 0
   choresCompleted: number = 0
   isActionSheetOpen = false
-  isModalOpen = true
+  isModalOpen = false
 
 
   ngOnInit(): void {

@@ -11,7 +11,7 @@ import { ListDetailsModule } from './list-details/list-details.module';
 import { ListsPageRoutingModule } from './lists-routing.module';
 import { ListsPage } from './lists.page';
 import { ListsEffects } from './state/lists.effects';
-import * as fromLists from './state/lists.reducer';
+import { reducer } from './state/lists.reducer';
 
 @NgModule({
   imports: [
@@ -21,7 +21,7 @@ import * as fromLists from './state/lists.reducer';
     ListsPageRoutingModule,
     ListCardModule,
     ListDetailsModule,
-    StoreModule.forFeature(fromLists.listsFeatureKey, fromLists.reducer),
+    StoreModule.forFeature('lists', reducer),
     EffectsModule.forFeature([ListsEffects]),
   ],
   declarations: [ListsPage]
