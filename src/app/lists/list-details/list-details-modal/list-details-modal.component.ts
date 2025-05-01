@@ -11,12 +11,13 @@ import { selectSelectedList } from '../../state/lists.selectors';
   standalone: false,
 })
 export class ListDetailsModalComponent  implements OnInit {
-  @Input() isOpen: boolean = false;
+  @Input() isOpen: boolean = true;
   
   list$: Observable<List | undefined> = this.store.select(selectSelectedList)
 
   constructor(private store: Store) { }
 
-  ngOnInit() {}
+  ngOnInit() {
+  }
 
 }

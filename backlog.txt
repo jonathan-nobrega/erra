@@ -5,6 +5,8 @@ Backlog
         for that i need to add to last assignee string with latest check in date
     [x] i want  to know if I'm late on the task
 [x] improve List details big header (looks terrible)
+
+[ ] fix List details sheet
 [ ] make people card
 [ ] clicking chores card leads to Chore details
 [ ] ADD icon on right corner of all screens

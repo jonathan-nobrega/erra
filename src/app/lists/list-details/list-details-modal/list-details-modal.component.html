@@ -1,4 +1,5 @@
-<ion-modal [isOpen]="isOpen"
+<ion-modal #modal
+  [isOpen]="isOpen"
   [initialBreakpoint]="1"
   [breakpoints]="[0, 1]">
   <ng-template>
@@ -19,9 +20,7 @@
         <ion-card-subtitle>Created by</ion-card-subtitle>
         <div>
           <div style="display: flex; align-items: center;">
-            <app-avatar name={{(list$
-              |
-              async)?.createdBy?.name}}></app-avatar>
+            <app-avatar name="{{(list$ | async)?.createdBy?.name}}"></app-avatar>
             <p style="margin-left: 8px;">{{(list$ | async)?.createdBy?.name}}</p>
           </div>
         </div>
