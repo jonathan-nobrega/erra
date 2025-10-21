@@ -1,0 +1,57 @@
+<ion-footer>
+
+  <ion-tab-bar slot="bottom">
+    <ion-tab-button tab="home"
+      href="/home/lists">
+      <ion-icon aria-hidden="true"
+        name="home-outline"></ion-icon>
+      <ion-label>Home</ion-label>
+    </ion-tab-button>
+
+    <ion-tab-button tab="calendar"
+      href="/calendar">
+      <ion-icon aria-hidden="true"
+        name="calendar-outline"></ion-icon>
+      <ion-label>Calendar</ion-label>
+    </ion-tab-button>
+
+    <!-- not working fix ion-fab add button -->
+    <ion-tab-button tab="add">
+      <ion-fab vertical="top"
+        horizontal="start"
+        slot="fixed">
+
+        <ion-fab-button>
+          <ion-icon name="add-outline"></ion-icon>
+        </ion-fab-button>
+
+        <ion-fab-list side="top">
+          <ion-fab-button href="/home/new-list"
+            color="tertiary">
+            <ion-icon name="list-outline"></ion-icon>
+          </ion-fab-button>
+          <ion-fab-button href="/calendar/new-chore"
+            color="tertiary">
+            <ion-icon name="calendar-outline"></ion-icon>
+          </ion-fab-button>
+        </ion-fab-list>
+
+      </ion-fab>
+      <ion-label>Add</ion-label>
+    </ion-tab-button>
+
+    <ion-tab-button tab="chat"
+      href="/home/lists">
+      <ion-icon aria-hidden="true"
+        name="chatbox-outline"></ion-icon>
+      <ion-label>ChAI</ion-label>
+    </ion-tab-button>
+
+    <ion-tab-button tab="chat"
+      href="/settings">
+      <ion-icon aria-hidden="true"
+        name="settings-outline"></ion-icon>
+      <ion-label>Settings</ion-label>
+    </ion-tab-button>
+  </ion-tab-bar>
+</ion-footer>

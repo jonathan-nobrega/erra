@@ -1,0 +1,34 @@
+<ion-header>
+  <ion-tab-bar class="tab-bar">
+
+    <ion-tab-button tab="lists"
+      href="/tabs/lists">
+      <ion-icon aria-hidden="true"
+        name="list-outline"></ion-icon>
+      <ion-label>Lists</ion-label>
+    </ion-tab-button>
+
+    <ion-tab-button tab="chores">
+      <ion-icon aria-hidden="true"
+        name="checkmark-done-outline"></ion-icon>
+      <ion-label>Chores</ion-label>
+      <!-- <ion-content>
+        this is chores page
+      </ion-content> -->
+    </ion-tab-button>
+
+    <ion-tab-button tab="people">
+      <ion-icon aria-hidden="true"
+        name="people-outline"></ion-icon>
+      <ion-label>People</ion-label>
+      <!-- <ion-content>
+        this is people page
+      </ion-content> -->
+    </ion-tab-button>
+    
+  </ion-tab-bar>
+</ion-header>
+
+<ion-content>
+  <ion-router-outlet></ion-router-outlet>
+</ion-content>

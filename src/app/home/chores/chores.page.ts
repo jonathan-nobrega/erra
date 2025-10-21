@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import listData from '../../stubdata/lists.json';
+import listData from '../../../stubdata/lists.json';
 import { Chore } from './chore.interface';
 
 @Component({

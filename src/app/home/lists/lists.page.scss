@@ -1,0 +1,30 @@
+
+// ion-tab-bar {
+//   --color-selected: var(--ion-color-primary); // Highlight color for icon/text
+//   --background: #fff; // Optional: tab bar background
+//   position: relative;
+// }
+
+// ion-tab-button.tab-selected {
+//   position: relative;
+//   color: var(--ion-color-primary);
+
+//   &::after {
+//     content: '';
+//     display: block;
+//     position: absolute;
+//     left: 25%;
+//     right: 25%;
+//     bottom: 0;
+//     height: 4px;
+//     border-radius: 2px 2px 0 0;
+//     background: var(--ion-color-primary);
+//     z-index: 10;
+//   }
+// }
+
+ion-tab-button.tab-selected {
+    border-bottom: 2px solid var(--ion-color-primary);
+    font-weight: 700;
+}
+

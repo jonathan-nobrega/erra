@@ -1,9 +1,23 @@
-.avatar-container {
+.avatar-container-filled {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     width: 40px;
     height: 40px;
     border-radius: 50%;
     border: 4px solid white;
     background-color: var(--ion-color-secondary);
+}
+
+.avatar-container-outlined {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 4px solid white;
+    // background-color: white
 }
 
 .name-description {

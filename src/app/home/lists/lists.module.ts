@@ -1,11 +1,10 @@
+import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-import { ExploreContainerComponentModule } from '../explore-container/explore-container.module';
-
-import { CommonModule } from '@angular/common';
 import { IonicModule } from '@ionic/angular';
 import { EffectsModule } from '@ngrx/effects';
 import { StoreModule } from '@ngrx/store';
+import { AvatarComponent } from "../../components/avatar/avatar.component";
 import { ListCardModule } from './list-card/list-card.module';
 import { ListDetailsModule } from './list-details/list-details.module';
 import { ListsPageRoutingModule } from './lists-routing.module';
@@ -17,13 +16,13 @@ import { reducer } from './state/lists.reducer';
   imports: [
     IonicModule, CommonModule,
     FormsModule,
-    ExploreContainerComponentModule,
     ListsPageRoutingModule,
     ListCardModule,
     ListDetailsModule,
     StoreModule.forFeature('lists', reducer),
     EffectsModule.forFeature([ListsEffects]),
-  ],
+    AvatarComponent
+],
   declarations: [ListsPage]
 })
 export class ListsPageModule { }

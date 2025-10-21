@@ -12,8 +12,10 @@ export class AvatarComponent implements OnInit {
   @Input() name: string;
   @Input() isAvatar: boolean = true;
   @Input() isCustom: boolean = false;
+  @Input() size: number = 40;
+  @Input() type: 'filled' | 'outlined' = 'filled';
 
-  constructor() {}
+  constructor() { }
 
-  ngOnInit() {}
+  ngOnInit() { }
 }

@@ -14,6 +14,7 @@ import { selectAllLists } from './state/lists.selectors';
 export class ListsPage implements OnInit {
 
   lists$: Observable<List[]> = this.store.select(selectAllLists);
+  AvatarType: any;
 
   constructor(private store: Store) { }
 

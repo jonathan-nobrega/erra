@@ -1,12 +1,4 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      Lists
-    </ion-title>
-  </ion-toolbar>
-</ion-header>
-
-<ion-content fullscreen="true">
+<ion-content>
   <ion-list lines="none">
     <app-list-card *ngFor="let item of lists$ | async"
       (click)="listClicked(item.id)"

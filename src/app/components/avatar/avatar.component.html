@@ -1,4 +1,4 @@
-<div class="avatar-container">
+<div [ngClass]="{ 'avatar-container-filled': this.type === 'filled', 'avatar-container-outlined': this.type === 'outlined' }">
   <ng-container *ngIf="isAvatar; else textTemplate">
     <img [src]="'https://api.dicebear.com/9.x/adventurer/svg?seed=' + name"
       alt="User Avatar" />

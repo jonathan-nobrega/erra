@@ -1,0 +1,19 @@
+<ion-header [translucent]="true">
+  <div>
+    <ion-buttons slot="primary">
+      <ion-img slot="start"
+        class="height: 40px"
+        src="assets/logo.png"></ion-img>
+      <ion-button>
+        <ion-icon name="notifications"
+          color="var(--ion-color-primary)"></ion-icon>
+      </ion-button>
+      <ion-button>
+        <app-avatar [name]="'User Name'"
+          [isAvatar]="true"
+          [isCustom]="false"
+          type="outlined"></app-avatar>
+      </ion-button>
+    </ion-buttons>
+  </div>
+</ion-header>

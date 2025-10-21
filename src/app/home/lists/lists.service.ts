@@ -1,6 +1,6 @@
 import { Injectable } from "@angular/core";
 import { delay, of } from "rxjs";
-import listsData from "../../stubdata/lists.json";
+import listsData from "../../../stubdata/lists.json";
 
 @Injectable({ providedIn: "root" })
 export class ListsService {
